@@ -21,13 +21,13 @@ body {
     gap: 20px;
 }
 .intro_wrapper button {
+    background-color: hsl(214, 73%, 19%);
+    box-shadow: 0 0 5px 1px rgba(255, 255, 255, 0.203);
     font-size: 20px;
     height: 100px;
     max-width: 450px;
     padding: 10px 20px;
     width: 90%;
-    background-color: hsl(214, 73%, 19%);
-    box-shadow: 0 0 5px 1px rgba(255, 255, 255, 0.203);
 }
 .intro_wrapper button:nth-child(1) {
 margin-top: 50px;
@@ -43,10 +43,10 @@ h1, h2 {
     text-align:center;
 }
 h1 {
+    letter-spacing: 0.3ch;
     padding:60px;
     text-align: center;
     text-transform: uppercase;
-    letter-spacing: 0.3ch;
 }
 h2 {
     border-radius: 8px;
@@ -58,6 +58,7 @@ h1:hover, h2:hover, p:hover {
 }
 section {
     align-content: center;
+    background-color: white;
     border-radius: 8px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.279);
     display:flex;
@@ -66,7 +67,6 @@ section {
     margin-top: 5px;
     padding: 25px;
     width: 300px;
-    background-color: white;
 }
 
 section p {
@@ -104,7 +104,8 @@ fieldset {
 
 section > label {
     background: #303F9F;
-    clip-path: polygon(0 0,100% 0,100% calc(100% - 30.00px),calc(100% - 20.00px) 100%,0 100%);
+    -webkit-clip-path: polygon(0 0,100% 0,100% calc(100% - 30.00px),calc(100% - 20.00px) 100%,0 100%);
+            clip-path: polygon(0 0,100% 0,100% calc(100% - 30.00px),calc(100% - 20.00px) 100%,0 100%);
     color: #fff;
     left: -20px;
     margin-right: 50px;
@@ -114,15 +115,17 @@ section > label {
 }
 
 sub {
-    text-decoration: underline #5f71e7;
-    position: relative;
-    top: 80px;
     letter-spacing: normal;
+    position: relative;
+    -webkit-text-decoration: underline #5f71e7;
+            text-decoration: underline #5f71e7;
+    top: 80px;
 }
 
 fieldset legend {
     background: #303F9F;
-    clip-path: polygon(0 0,100% 0,100% calc(100% - 30.00px),calc(100% - 20.00px) 100%,0 100%);
+    -webkit-clip-path: polygon(0 0,100% 0,100% calc(100% - 30.00px),calc(100% - 20.00px) 100%,0 100%);
+            clip-path: polygon(0 0,100% 0,100% calc(100% - 30.00px),calc(100% - 20.00px) 100%,0 100%);
     color: #fff;
     display:inline;
     left: -25px;
@@ -153,8 +156,8 @@ input:disabled {
 
 .correct {
     background-color: #81C784;
-    transition: all 1.6s ease-out;
     border-radius: 4px;
+    transition: all 1.6s ease-out;
 }
 
 .disabled {
