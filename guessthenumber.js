@@ -283,7 +283,7 @@ mode3Play.addEventListener(`click`, () => {
 });
 
 let countNumber = 0;
-function mode3Check() { // TODO
+function mode3Check() {
     playerGuess = +mode3PlayerGuess.value;
     switch (true) {
         case (min3 >= max3):
