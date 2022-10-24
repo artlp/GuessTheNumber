@@ -150,7 +150,6 @@ input:disabled {
     background-color: #81C784;
     transition: all 1.6s ease-out;
     border-radius: 4px;
-
 }
 
 .disabled {
@@ -175,12 +174,6 @@ input[type="number"]:focus {
     position: relative;
     top: -25px;
 }
-
-
-
-
-
-
 @media (max-width: 552px) {
     h1 {
         font-size: 24px;
