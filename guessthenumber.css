@@ -37,7 +37,7 @@ margin-bottom: 50px;
 h1, h2 {
     background-color: #303F9F;
     color: #E3F2FD;
-    font-family: 'Work Sans', sans-serif;    
+    font-family: 'Varela Round', sans-serif;  
     padding:5%;
     text-align:center;
 }
@@ -45,6 +45,7 @@ h1 {
     padding:60px;
     text-align: center;
     text-transform: uppercase;
+    letter-spacing: 0.3ch;
 }
 h2 {
     border-radius: 8px;
@@ -109,6 +110,9 @@ section > label {
 
 sub {
     text-decoration: underline #5f71e7;
+    position: relative;
+    top: 80px;
+    letter-spacing: normal;
 }
 
 fieldset legend {
@@ -144,6 +148,9 @@ input:disabled {
 
 .correct {
     background-color: #81C784;
+    transition: all 1.6s ease-out;
+    border-radius: 4px;
+
 }
 
 .disabled {
@@ -169,12 +176,16 @@ input[type="number"]:focus {
     top: -25px;
 }
 
+
+
+
+
+
 @media (max-width: 552px) {
     h1 {
         font-size: 24px;
     }
     .intro button {
-        /* font-size: 14px !important; */
         height: 80px !important;      
     }
 
@@ -182,6 +193,25 @@ input[type="number"]:focus {
         left: -8.5% !important;
     }
     section > label {
-        left: -6.5% !important;
+        left: -6.8% !important;
+    }
+}
+
+@media (max-width: 374px) {
+    h1 {
+        font-size: 24px;
+        letter-spacing: normal;
+    }
+    .intro button {
+        height: 80px !important;      
+    }
+
+    fieldset legend {
+        left: -3% !important;
+        width: 80% !important;
+    }
+    section > label {
+        left: -1% !important;
+        width: 90% !important;
     }
 }

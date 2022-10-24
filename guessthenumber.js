@@ -275,7 +275,7 @@ mode3Play.addEventListener(`click`, () => {
     mode3PlayerGuess.setAttribute("max", max3);
     mode3Game.classList.remove("hidden");
     mode3Answer.style.color = "white";
-    mode3Start.innerHTML = `Number is stored and hidden`;
+    mode3Start.innerHTML = `Number is saved!`;
     mode3Answer.disabled = true;
     mode3Play.disabled = true;
     mode3Radios.disabled = true;
