@@ -5,7 +5,7 @@
 }
 
 body {
-/* background: #f5fff5; */
+background: #f5fff5;
 }
 .intro {
     background: linear-gradient(180deg, #303F9F 50%, #f5fff5 150%);
@@ -61,20 +61,23 @@ h1:hover, h2:hover, p:hover {
     cursor: default;
 }
 section {
+    background-color: white;
     border-radius: 8px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.279);
-    align-content: center;
+    display:grid;
+    /* align-content: center;
     display: flex;
-    flex-flow: column wrap;
-    gap: 6px;
+    flex-flow: column wrap; */
+    gap: 6px; 
+    grid-auto-rows: min-content;
     padding: 25px;
     width: 300px;
-    /* display:grid; */
-    gap: 6px;
-    /* grid-auto-rows: min-content; */
     /* place-items: center; */
 }
-
+.flex {
+    display: flex;
+    flex-direction: column;
+}
 section p {
     font-weight: 500;
     padding: 3px 4px;
@@ -103,10 +106,8 @@ button {
     width: 5rem;
 }
 #mode1_reset, #mode2_reset, #mode3_reset {
-    /* justify-self: flex-end; */
-    margin-top:auto;
-} 
-
+    position:relative;
+}
 fieldset {
     border: none;
     padding: 5px;
@@ -117,7 +118,7 @@ section > label {
     -webkit-clip-path: polygon(0 0,100% 0,100% calc(100% - 30.00px),calc(100% - 20.00px) 100%,0 100%);
             clip-path: polygon(0 0,100% 0,100% calc(100% - 30.00px),calc(100% - 20.00px) 100%,0 100%);
     color: #fff;
-    left: -20px;
+    left: -25px;
     margin-right: 50px;
     padding: 5px 10px ;
     position: relative;
@@ -138,7 +139,7 @@ fieldset legend {
             clip-path: polygon(0 0,100% 0,100% calc(100% - 30.00px),calc(100% - 20.00px) 100%,0 100%);
     color: #fff;
     display:inline;
-    left: -25px;
+    left: -30px;
     padding: 5px 10px ;
     position: relative;
     width:80%;
@@ -206,10 +207,10 @@ input[type="number"]:focus {
     }
 
     fieldset legend {
-        left: -8.5% !important;
+        /* left: -30px !important; */
     }
     section > label {
-        left: -6.8% !important;
+        left: -26px !important;
     }
 }
 
@@ -223,11 +224,11 @@ input[type="number"]:focus {
     }
 
     fieldset legend {
-        left: -3% !important;
-        width: 80% !important;
+        /* left: -30px !important; */
+        width: 100% !important;
     }
     section > label {
-        left: -1% !important;
+        left: -26px !important;
         width: 90% !important;
     }
 }
