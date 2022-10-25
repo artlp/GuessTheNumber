@@ -15,12 +15,9 @@ background: #f5fff5;
     width: 100vw;
 }
 .intro_wrapper {
+    margin-top: 50px;
     align-items: center;
-    /* display:flex; 
-    gap: 20px;
-    flex-flow: column wrap; */
     display: grid;
-    gap: 20px;
     place-items: center;
 }
 .intro_wrapper button {
@@ -31,13 +28,9 @@ background: #f5fff5;
     max-width: 450px;
     padding: 10px 20px;
     width: 90%;
+    margin-bottom: 20px;
 }
-.intro_wrapper button:nth-child(1) {
-margin-top: 50px;
-}
-.intro_wrapper button:nth-child(4) {
-margin-bottom: 50px;
-}
+
 h1, h2 {
     background-color: #303F9F;
     color: #E3F2FD;
@@ -61,22 +54,16 @@ h1:hover, h2:hover, p:hover {
     cursor: default;
 }
 section {
-    background-color: white;
+    align-content: center;
     border-radius: 8px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.279);
-    display:grid;
-    /* align-content: center;
     display: flex;
-    flex-flow: column wrap; */
-    gap: 6px; 
-    grid-auto-rows: min-content;
+    flex-flow: column wrap;
     padding: 25px;
     width: 300px;
-    /* place-items: center; */
 }
-.flex {
-    display: flex;
-    flex-direction: column;
+section > * {
+    margin-bottom: 6px;
 }
 section p {
     font-weight: 500;
@@ -106,8 +93,9 @@ button {
     width: 5rem;
 }
 #mode1_reset, #mode2_reset, #mode3_reset {
-    position:relative;
-}
+    margin-top:auto;
+} 
+
 fieldset {
     border: none;
     padding: 5px;
@@ -118,7 +106,7 @@ section > label {
     -webkit-clip-path: polygon(0 0,100% 0,100% calc(100% - 30.00px),calc(100% - 20.00px) 100%,0 100%);
             clip-path: polygon(0 0,100% 0,100% calc(100% - 30.00px),calc(100% - 20.00px) 100%,0 100%);
     color: #fff;
-    left: -25px;
+    left: -20px;
     margin-right: 50px;
     padding: 5px 10px ;
     position: relative;
@@ -139,7 +127,7 @@ fieldset legend {
             clip-path: polygon(0 0,100% 0,100% calc(100% - 30.00px),calc(100% - 20.00px) 100%,0 100%);
     color: #fff;
     display:inline;
-    left: -30px;
+    left: -25px;
     padding: 5px 10px ;
     position: relative;
     width:80%;
@@ -207,10 +195,10 @@ input[type="number"]:focus {
     }
 
     fieldset legend {
-        /* left: -30px !important; */
+        left: -8.5% !important;
     }
     section > label {
-        left: -26px !important;
+        left: -6.8% !important;
     }
 }
 
@@ -224,11 +212,11 @@ input[type="number"]:focus {
     }
 
     fieldset legend {
-        /* left: -30px !important; */
-        width: 100% !important;
+        left: -3% !important;
+        width: 80% !important;
     }
     section > label {
-        left: -26px !important;
+        left: -1% !important;
         width: 90% !important;
     }
 }
