@@ -44,10 +44,10 @@ h1, h2 {
 }
 h1 {
     letter-spacing: 0.3ch;
+    margin: 0;
     padding:60px;
     text-align: center;
     text-transform: uppercase;
-    margin: 0;
 }
 h2 {
     border-radius: 8px;
@@ -59,13 +59,11 @@ h1:hover, h2:hover, p:hover {
 }
 section {
     align-content: center;
-    background-color: white;
     border-radius: 8px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.279);
-    display:flex;
+    display: flex;
     flex-flow: column wrap;
     gap: 6px;
-    margin-top: 5px;
     padding: 25px;
     width: 300px;
 }
@@ -97,9 +95,14 @@ button {
     flex-shrink: 0;
     width: 5rem;
 }
+#mode1_reset, #mode2_reset, #mode3_reset {
+    /* justify-self: flex-end; */
+    margin-top:auto;
+
+} 
+
 fieldset {
     border: none;
-    border-radius: 5px;
     padding: 5px;
 }
 
