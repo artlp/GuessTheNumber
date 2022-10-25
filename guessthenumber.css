@@ -47,6 +47,7 @@ h1 {
     padding:60px;
     text-align: center;
     text-transform: uppercase;
+    margin: 0;
 }
 h2 {
     border-radius: 8px;
