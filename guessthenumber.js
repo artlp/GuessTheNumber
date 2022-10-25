@@ -32,7 +32,8 @@ const mode3PlayerGuess = document.querySelector('#mode3_playerGuess');
 const mode3GuessLabel = document.querySelector("#mode3_guess_label");
 const refreshButton = document.querySelector('.refresh');
 
-
+let countNumber = 0;
+let countNumber2 = 0;
 let min, min2, min3;
 let max, max2, max3;
 let guess, guess2;
@@ -155,7 +156,7 @@ function reset1() {
 mode2Lower.disabled = true;
 mode2Higher.disabled = true;
 mode2Correct.disabled = true;
-
+let middle =
 
 mode2Min.addEventListener(`input`, () => {
     mode2Output.innerHTML = `The range is ${+mode2Min.value} - ${+mode2Max.value}`;
@@ -178,11 +179,13 @@ mode2Play.addEventListener(`click`, () => {
         // reset2();
     }
     if (numberGenerated2 === 0) {
-        randomNumber2 = Math.floor(Math.random() * (max2 - min2 + 1)) + min2;
+        // randomNumber2 = Math.floor(Math.random() * (max2 - min2 + 1)) + min2;
+        randomNumber2 = Math.floor((max2 - min2)/2) + min2;;
         numberGenerated2 = 1;
         mode2Min.disabled = true;
         mode2Guess.disabled = true;
         mode2Max.disabled = true;
+        countNumber2++;
     }
     mode2Output.innerText = `Computer's guess is ${randomNumber2}, is it correct?`;
     mode2Lower.disabled = false;
@@ -193,22 +196,30 @@ mode2Play.addEventListener(`click`, () => {
 });
 
 const mode2LowerButton = () => {
-    max2 = randomNumber2 - 1;
-    randomNumber2 = Math.floor(Math.random() * (max2 - min2 + 1)) + min2;
+    countNumber2++;
+    max2 = randomNumber2 -1 ;
+    randomNumber2 = Math.floor((max2 - min2)/2) + min2;
+    // max2 = randomNumber2 - 1; "realistic mode"
+    // randomNumber2 = Math.floor(Math.random() * (max2 - min2 + 1)) + min2;
     mode2Output.innerText = `Computer picked a lower number, which is ${randomNumber2}, is it correct?`;
-
+    
+    // console.log(`min is ${min2}, max is ${max2}, guess is ${randomNumber2}`);
 };
 const mode2HigherButton = () => {
+    countNumber2++;
     min2 = randomNumber2 + 1;
-    randomNumber2 = Math.floor(Math.random() * (max2 - min2 + 1)) + min2;
+    randomNumber2 = Math.floor((max2 - min2)/2) + min2;
+    // min2 = randomNumber2 + 1; "realistic mode"
+    // randomNumber2 = Math.floor(Math.random() * (max2 - min2 + 1)) + min2;
     mode2Output.innerText = `Computer picked a higher number, which is  ${randomNumber2}, is it correct?`;
-
+    
+    // console.log(`min is ${min2}, max is ${max2}, guess is ${randomNumber2}`);
 };
 
 mode2Lower.addEventListener('click', mode2LowerButton);
 mode2Higher.addEventListener('click', mode2HigherButton);
 mode2Correct.addEventListener('click', () => {
-    mode2Output.innerText = (`Computer guessed your number!`);
+    mode2Output.innerText = (`Computer guessed your number in ${countNumber2} tries.`);
     mode2Output.classList.add(`correct`);
 });
 
@@ -229,6 +240,7 @@ function reset2() {
     max2 = 0;
     min2 = 0;
     mode2Output.innerText = `Game reset, waiting for input`;
+    countNumber2 = 0;
 }
 
 mode2Reset.addEventListener('click', reset2);
@@ -282,7 +294,7 @@ mode3Play.addEventListener(`click`, () => {
     return playerAnswer;
 });
 
-let countNumber = 0;
+
 function mode3Check() {
     playerGuess = +mode3PlayerGuess.value;
     switch (true) {
